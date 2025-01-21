@@ -4,9 +4,9 @@ import { useState } from "react";
 
 function ListGroup() {
   let items = ["New York", "Mumbai", "Tokyo", "London", "Paris"];
-  let selctedIndex = 0;
+  // let selctedIndex = 0;
   //Hook
-  const arr = useState(-1);
+  const [selctedIndex, setSelctedIndex] = useState(-1);
 
   // Event hanlder
   // const handleClick = (event: MouseEvent) => console.log(event);
@@ -26,7 +26,7 @@ function ListGroup() {
             key={item}
             // onClick={handleClick}
             onClick={() => {
-              selctedIndex = index;
+              setSelctedIndex(index);
             }}
           >
             {item}
