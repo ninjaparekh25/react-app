@@ -37,8 +37,8 @@ Make sure you have the following installed on your machine:
 #### 1. Clone the Repository
 To clone the repository, run:
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/yourusername/your-repo-name.git](https://github.com/ninjaparekh25/react-app.git
+cd react-app
 ```
 
 #### 2. Install Dependencies
