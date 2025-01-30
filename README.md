@@ -118,8 +118,8 @@ Here’s a breakdown of the project structure:
 Contributions are welcome! If you’d like to contribute to the project or suggest an improvement, feel free to open an issue or submit a pull request. 🚀
 
 ## 👨‍💻 Author
-👨‍💻 **Your Name**  
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com) or [Twitter](https://www.twitter.com).
+👨‍💻 **Meet Parekh**  
+Feel free to connect with me on [LinkedIn](www.linkedin.com/in/mgp25) or [Twitter](https://www.twitter.com).
 
 ---
 
