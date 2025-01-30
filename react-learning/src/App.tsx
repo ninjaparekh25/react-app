@@ -20,8 +20,9 @@ function App() {
 
 export default App; */
 
-/*import Alert from "./components/Alert";
-
+import { useState } from "react";
+import Alert from "./components/Alert";
+/*
 function App() {
   return (
     <div>
@@ -35,7 +36,7 @@ function App() {
 export default App;*/
 
 import Button from "./components/Button";
-
+/*
 const App = () => {
   return (
     <div>
@@ -43,5 +44,20 @@ const App = () => {
     </div>
   );
 };
+
+export default App;*/
+
+function App() {
+  const [alertVisible , setAlertVisibility] = useState(false);
+
+  return (
+    <div>
+      { alertVisible && <Alert>My alert</Alert> }
+      <Button color="danger" onClick={() => setAlertVisibility(true)}>
+        My Button
+      </Button>
+    </div>
+  );
+}
 
 export default App;
