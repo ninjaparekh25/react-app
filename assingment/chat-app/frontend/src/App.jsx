@@ -1,4 +1,5 @@
 import { useAuthStore } from "./store/useAuthStore.js";
+import { useThemeStore } from "./store/useThemeStore.js";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
@@ -12,6 +13,7 @@ import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { theme } = useThemeStore();
 
   useEffect(() => {
     checkAuth(); // Check auth status when the app mounts
@@ -27,18 +29,33 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div data-theme={theme}>
       <Navbar />
 
       <Routes>
         {/* Protected routes */}
-        <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
-        <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
-        <Route path="/settings" element={authUser ? <SettingsPage /> : <Navigate to="/login" />} />
+        <Route
+          path="/"
+          element={authUser ? <HomePage /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/profile"
+          element={authUser ? <ProfilePage /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/settings"
+          element={authUser ? <SettingsPage /> : <Navigate to="/login" />}
+        />
 
         {/* Public routes */}
-        <Route path="/signup" element={!authUser ? <SignUpPage /> : <Navigate to="/" />} />
-        <Route path="/login" element={!authUser ? <LoginPage /> : <Navigate to="/" />} />
+        <Route
+          path="/signup"
+          element={!authUser ? <SignUpPage /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/login"
+          element={!authUser ? <LoginPage /> : <Navigate to="/" />}
+        />
       </Routes>
 
       <Toaster />
