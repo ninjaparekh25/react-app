@@ -88,6 +88,8 @@ export const logout = (req, res) => {
 export const updateProfile = async (req, res) => {
   try {
     const { profilePic } = req.body;
+    console.log('profile pic : ',profilePic)
+    console.log(req.body)
     const userId = req.user._id;
 
     if (!profilePic) {

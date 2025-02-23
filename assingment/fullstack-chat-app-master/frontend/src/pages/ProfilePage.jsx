@@ -9,13 +9,14 @@ const ProfilePage = () => {
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
-
+    console.log(`FIle from handleimage : ${file}`)
     const reader = new FileReader();
-
+    console.log(reader)
     reader.readAsDataURL(file);
 
     reader.onload = async () => {
       const base64Image = reader.result;
+      console.log(base64Image)
       setSelectedImg(base64Image);
       await updateProfile({ profilePic: base64Image });
     };
